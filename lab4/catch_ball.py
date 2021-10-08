@@ -26,8 +26,8 @@ global gor, ver
 
 balls = list()
 for i in range(10):
-    x = randint(-1000000, 1000000)
-    y = randint(-1000000, 1000000)
+    x = randint(-100000, 100000)
+    y = randint(-100000, 100000)
     r = randint(10, 100)
     color = COLORS[randint(0, 5)]
     circle(screen, color, (randint(100, 900), randint(100, 900)), r)
@@ -49,7 +49,7 @@ def new_balls():
             balls[i][1]=2*900-balls[i][1]
         elif (y<= 0):
             balls[i][1]=-balls[i][1]
-        circle(screen, balls[i][3], (balls[i][0]/100000*time+600, balls[i][1]/100000*time+450), balls[i][2])
+        circle(screen, balls[i][3], (balls[i][0]/10000*time+600, balls[i][1]/10000*time+450), balls[i][2])
         
 def click(event):
     global count
